@@ -1,0 +1,34 @@
+<mat-toolbar class="toolbar"
+  [ngClass]="{
+    '--desktop':(displayType$ | async)==='DESKTOP',
+    '--mobile':(displayType$ | async)==='MOBILE'
+  }">
+
+  <div class="title-box">
+    <button mat-button
+      routerLink="/">
+      <span class="title">TK360</span>
+    </button>
+  </div>
+
+  <nav class="navigation-row"
+    [ngClass]="{
+      '--desktop':(displayType$ | async)==='DESKTOP',
+      '--mobile':(displayType$ | async)==='MOBILE'
+    }">
+
+    <ng-container *ngIf="(displayType$ | async)==='MOBILE'; else desktopNav">
+      <button mat-icon-button
+        (click)="handleMenuClick()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </ng-container>
+    <ng-template #desktopNav>
+      <app-nav-option *ngFor="let button of buttons"
+        [text]="button.text"
+        [linkTo]="button.linkTo">
+      </app-nav-option>
+    </ng-template>
+  </nav>
+
+</mat-toolbar>

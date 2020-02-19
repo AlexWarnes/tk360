@@ -1,0 +1,64 @@
+
+mat-toolbar {
+  // position: fixed;
+  z-index: 5;
+}
+
+.toolbar{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: transparent;
+  color: #333333;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &.--desktop {
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+  }
+
+  // &.--mobile {
+  //   position: fixed;
+  //   top: unset;
+  //   bottom: 0;
+  //   left: 0;
+  // }
+}
+
+.title-box {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;  
+
+  .title {
+    margin: 0 0 0 10px;
+  }
+}
+
+.navigation-row {
+  min-width: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+.nav-btn-box {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+  transition: all .3s ease;
+
+    &.--active{
+      border-bottom: 2px solid #ff4081;
+    }   
+}

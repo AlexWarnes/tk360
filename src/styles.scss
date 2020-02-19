@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+  margin: 0;
+  background-color: #fafafa;
+  font-family: Montserrat, Roboto, "Helvetica Neue", sans-serif; 
+  * {
+    box-sizing: border-box;
+  }
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h1,h2,h3,h4,p {
+  margin: 0;
+}
+
+p, span {
+  font-family: 'Roboto Mono', monospace;
+}

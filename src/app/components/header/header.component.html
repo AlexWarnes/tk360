@@ -1,9 +1,17 @@
-<header class="landing-header">
-  <div class="header-img"></div>
+<header class="header-container">
+
+  <div class="header-img"
+    [ngStyle]="{
+    'background-image':'linear-gradient(0deg, rgba(255,255,255,0.20) 0%, rgba(255,255,255,0.80) 100%), url('+ backgroundImgURL + ')'
+  }"></div>
   <div class="header-content">
-    <h1 class="title">TK360</h1>
-    <p class="description">Complete design and remodel construction services.</p>
-    <div class="service-list">
+    <h1 class="title">{{title}}</h1>
+    <p class="description">{{description}}</p>
+    <ng-content></ng-content>
+
+    <!-- <h1 class="title">TK360</h1> -->
+    <!-- <p class="description">Complete design and remodel construction services.</p> -->
+    <!-- <div class="service-list">
       <div class="service-item">
         <i class="material-icons">business</i>
         <span>Commercial</span>
@@ -24,6 +32,6 @@
           <span>Get in Touch</span>
         </button>
       </div>
-    </div>
+    </div> -->
   </div>
 </header>

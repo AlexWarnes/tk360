@@ -1,1 +1,27 @@
-<app-header></app-header>
+<app-header [title]="title"
+  [description]="description"
+  [backgroundImgURL]="imgURL">
+  <div class="service-list">
+    <div class="service-item">
+      <i class="material-icons">business</i>
+      <span>Commercial</span>
+    </div>
+    <div class="service-item">
+      <i class="material-icons">house</i>
+      <span>Residential</span>
+    </div>
+    <div class="service-item">
+      <i class="material-icons">build</i>
+      <span>Handyman</span>
+    </div>
+    <div class="service-item">
+      <button mat-button
+        role="link"
+        routerLink="/contact"
+        class="contact-btn">
+        <span>Get in Touch</span>
+      </button>
+    </div>
+  </div>
+
+</app-header>

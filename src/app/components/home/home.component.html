@@ -18,10 +18,25 @@
       <button mat-button
         role="link"
         routerLink="/contact"
-        class="contact-btn">
-        <span>Get in Touch</span>
+        class="btn bk-red">
+        Get in Touch
       </button>
     </div>
   </div>
-
 </app-header>
+<main>
+  <section class="services-section">
+    <h2 class="section-heading shadow-heading">Services</h2>
+    <button class="btn bk-red"
+      mat-button
+      routerLink="/services">Learn More</button>
+
+    <div class="service-card-container">
+      <app-service-card *ngFor="let service of (serviceCards$ | async)"
+        [title]="service.title"
+        [description]="service.description"
+        [iconPath]="service.iconPath"></app-service-card>
+    </div>
+
+  </section>
+</main>

@@ -21,3 +21,31 @@ h1,h2,h3,h4,p {
 p, span {
   font-family: 'Roboto Mono', monospace;
 }
+
+.shadow-heading {
+  font-weight: 600;
+  width: min-content;
+  padding: 0 10px 2px 0;
+  margin-bottom: 15px;
+  box-shadow: 5px 5px 0 #204551;
+}
+
+.btn {
+  border-radius: 0 !important;
+  transition: all .3s ease !important;
+  box-shadow: 5px 5px 0 #333333 !important;
+  color: #ffffff !important;
+
+  &.bk-green {
+    background: #204551 !important;
+  }
+
+  &.bk-red {
+    background: #d44241 !important;
+  }
+
+  &:hover {
+    cursor: pointer !important;
+    box-shadow: -5px -5px 0 #333333 !important;
+  }
+}

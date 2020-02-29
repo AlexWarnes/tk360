@@ -42,12 +42,26 @@
   padding: 40px;
 }
 
-.service-heading {
+.section-header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 0 60px 0;
+
+
+  .title-box {
+    margin: 0 0 15px 0;
+  }
+}
+
+.section-heading {
   font-size: 32px;
 }
 
 .service-card-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   margin: 25px auto;
 }

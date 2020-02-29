@@ -1,4 +1,42 @@
 .service-card-box {
   width: 300px;
   padding: 20px;
+  margin: 20px 10px;
+  width: 275px;
+  padding: 20px 5px;
+  margin: 5px 10px;
+  text-align: center;
+
+  &:hover {
+    mat-icon {
+      color: #d44241;
+    }
+
+    .title-row {
+      border-bottom: 2px solid #d44241;
+    }
+  }
+}
+
+mat-icon {
+  transition: .3s ease;
+}
+
+.title-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  padding: 0 0 10px 0;
+  border-bottom: 2px solid #3333331a;
+  transition: .3s ease;
+}
+
+.title {
+  margin: 10px 0 0 0;
+}
+
+.description {
+  padding: 0 10px;
 }

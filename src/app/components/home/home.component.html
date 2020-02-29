@@ -26,11 +26,17 @@
 </app-header>
 <main>
   <section class="services-section">
-    <h2 class="section-heading shadow-heading">Services</h2>
-    <button class="btn bk-red"
-      mat-button
-      routerLink="/services">Learn More</button>
-
+    <div class="section-header">
+      <div class="title-box">
+        <h2 class="section-heading shadow-heading">Services</h2>
+        <button class=""
+          mat-stroked-button
+          routerLink="/services">Learn More</button>
+      </div>
+      <img src="/assets/images/undraw_best_place_r685.svg"
+        alt="Services"
+        height="150px">
+    </div>
     <div class="service-card-container">
       <app-service-card *ngFor="let service of (serviceCards$ | async)"
         [title]="service.title"

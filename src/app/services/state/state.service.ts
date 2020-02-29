@@ -23,27 +23,27 @@ export class StateService {
     {
       title: 'Home Remodeling',
       description: 'Is your home layout no longer working for you? We are experts in home remodeling and renovation.',
-      iconPath: undefined
+      iconPath: 'house'
     }, {
       title: 'HVAC',
       description: 'Calling us before your AC quits working all together can save you thousands in repairs. We service and repair all major brands.',
-      iconPath: 'x'
+      iconPath: 'toys'
     }, {
       title: 'Electrical',
       description: 'Full electric service that performs everything from new installation, to troubleshooting and repair for industrial, commercial & residential customers.',
-      iconPath: undefined
+      iconPath: 'power'
     }, {
       title: 'Flooring',
       description: 'From premium laminate to new hardwood floor installations. We can also bring your existing hardwood floors back to life.',
-      iconPath: undefined
+      iconPath: 'view_stream'
     }, {
-      title: 'Smart Home and Office',
+      title: 'Smart Home',
       description: 'Connect with devices and appliances in your home or office for added savings, security, and convenience.',
-      iconPath: undefined
+      iconPath: 'cast'
     }, {
       title: 'Vanilla Box',
       description: 'A clean slate for commercial property before your next tenant.',
-      iconPath: undefined
+      iconPath: 'format_paint'
     }
   ]);
   public serviceCards$: Observable<ServiceCard[]> = this.serviceCards_.asObservable();

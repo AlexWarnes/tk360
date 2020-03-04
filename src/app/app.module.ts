@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavOptionComponent } from './components/nav-option/nav-option.component';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SocialMediaComponent } from './components/social-media/social-media.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { HeaderComponent } from './components/header/header.component';
     ServicesComponent,
     NavOptionComponent,
     NavMenuComponent,
-    HeaderComponent
+    HeaderComponent,
+    SocialMediaComponent
   ],
   imports: [
     BrowserModule,

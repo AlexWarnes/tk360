@@ -52,6 +52,7 @@
 
   .title-box {
     margin: 0 0 15px 0;
+    max-width: 350px;
   }
 }
 
@@ -64,4 +65,18 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 25px auto;
+}
+
+.jobs-section {
+  background: #204551;
+  padding: 100px 50px;
+  color: white;
+
+  .subtext {
+    margin: 20px 0;
+  }
+
+  button {
+    border-color: #fafafa;
+  }
 }

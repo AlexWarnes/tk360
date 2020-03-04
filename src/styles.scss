@@ -10,6 +10,10 @@ body {
 }
 
 main {
+  // n/a
+}
+
+section.content-column {
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -18,8 +22,24 @@ h1,h2,h3,h4,p {
   margin: 0;
 }
 
-p, span {
+p, span, a {
   font-family: 'Roboto Mono', monospace;
+}
+
+a {
+  color: inherit;
+
+  &.external-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    mat-icon {
+      margin: 0 0 0 5px;
+      font-size: inherit;
+      height: unset;
+      width: unset;
+    }
+  }
 }
 
 .shadow-heading {
@@ -28,6 +48,19 @@ p, span {
   padding: 0 10px 2px 0;
   margin-bottom: 15px;
   box-shadow: 5px 5px 0 #204551;
+
+  &.--max {
+    width: max-content;
+  }
+
+
+  &.--dark {
+    box-shadow: 5px 5px 0 #204551;
+  }
+
+  &.--light {
+    box-shadow: 5px 5px 0 #fafafa;
+  }
 }
 
 .btn {
@@ -48,4 +81,12 @@ p, span {
     cursor: pointer !important;
     box-shadow: -5px -5px 0 #333333 !important;
   }
+}
+
+.override-mini-fab {
+    span.mat-button-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 }

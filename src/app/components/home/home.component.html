@@ -25,12 +25,11 @@
   </div>
 </app-header>
 <main>
-  <section class="services-section">
+  <section class="services-section content-column">
     <div class="section-header">
       <div class="title-box">
         <h2 class="section-heading shadow-heading">Services</h2>
-        <button class=""
-          mat-stroked-button
+        <button mat-stroked-button
           routerLink="/services">Learn More</button>
       </div>
       <img src="/assets/images/undraw_best_place_r685.svg"
@@ -45,4 +44,21 @@
     </div>
 
   </section>
+
+  <section class="jobs-section">
+    <div class="section-header">
+      <div class="title-box">
+        <h2 class="section-heading shadow-heading --max --light">Join Our Team</h2>
+      </div>
+      <img src="/assets/images/undraw_construction.svg"
+        alt="Resume"
+        height="150px">
+    </div>
+    <p class="subtext">Interested in expanding your career in remodeling &amp; renovations? Do you have
+      experience in construction &amp; carpenter work?</p>
+    <button mat-stroked-button
+      routerLink="/contact">Send Us a Message</button>
+
+  </section>
+
 </main>

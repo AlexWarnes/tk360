@@ -8,6 +8,7 @@
   <!-- SIDENAV MENU -->
   <mat-sidenav [opened]="sidenavIsOpen$ | async"
     class="sidenav-menu"
+    position="end"
     [ngClass]="{
       '--desktop':(displayType$ | async)==='DESKTOP',
       '--mobile':(displayType$ | async)==='MOBILE'

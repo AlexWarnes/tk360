@@ -1,1 +1,39 @@
-<p>nav-menu works!</p>
+<div class="menu-container">
+  <!-- <div class="menu-header"> -->
+  <button mat-button
+    class="menu-header"
+    routerLink="/">
+    <img src="/assets/icons/pattern.svg"
+      width="25px"
+      alt="Layers">
+    <span class="title">TK360</span>
+  </button>
+  <!-- </div> -->
+  <div class="menu-nav-container">
+    <div mat-button
+      routerLink="/services"
+      class="menu-nav-row">
+      <p>Services</p>
+    </div>
+    <div mat-button
+      routerLink="/portfolio"
+      class="menu-nav-row">
+      <p>Portfolio</p>
+    </div>
+    <div mat-button
+      routerLink="/about"
+      class="menu-nav-row">
+      <p>About</p>
+    </div>
+    <div mat-button
+      routerLink="/contact"
+      class="menu-nav-row">
+      <p>Contact</p>
+    </div>
+  </div>
+  <div mat-button
+    class="menu-close-footer">
+    <span>Close</span>
+    <mat-icon>double_arrow</mat-icon>
+  </div>
+</div>

@@ -72,8 +72,17 @@
   padding: 100px 50px;
   color: white;
 
-  .subtext {
-    margin: 20px 0;
+  .job-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .job-col {
+    max-width: 320px;
+    margin: 20px 5%;
   }
 
   button {

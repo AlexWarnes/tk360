@@ -38,7 +38,7 @@
 
 // HEADER WITH GRADIENT, NO CLIP
 .header-container {
-  background-position: center;
+  background-position: left;
   background-size: cover;
 }
 
@@ -69,5 +69,6 @@
   // max-width: 90%;
   margin: 15px 0 25px 0;
   color: #333333ca;
+  text-align: center;
 }
 

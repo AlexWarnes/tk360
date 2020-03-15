@@ -16,14 +16,17 @@ main {
 section.content-column {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 40px;
 }
 
 h1,h2,h3,h4,p {
   margin: 0;
 }
 
-p, span, a {
-  font-family: 'Roboto Mono', monospace;
+button {
+  p, span, a, .mono {
+    font-family: 'Roboto Mono', monospace;
+  }
 }
 
 a {
@@ -40,6 +43,10 @@ a {
       width: unset;
     }
   }
+}
+
+.title-img {
+  max-width: 100%;
 }
 
 .shadow-heading {

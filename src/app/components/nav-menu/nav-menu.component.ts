@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StateService } from '../../services/state/state.service';
 
 @Component({
   selector: 'app-nav-menu',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavMenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private STATE: StateService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  handleMenuClick() {
+    this.STATE.toggleSidenav();
   }
 
 }

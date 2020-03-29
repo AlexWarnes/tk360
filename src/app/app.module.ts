@@ -22,6 +22,7 @@ import { NavOptionComponent } from './components/nav-option/nav-option.component
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
+import { TestimonialComponent } from './components/testimonial/testimonial.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { SocialMediaComponent } from './components/social-media/social-media.com
     NavOptionComponent,
     NavMenuComponent,
     HeaderComponent,
-    SocialMediaComponent
+    SocialMediaComponent,
+    TestimonialComponent
   ],
   imports: [
     BrowserModule,

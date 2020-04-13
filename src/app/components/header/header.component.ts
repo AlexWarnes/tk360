@@ -9,11 +9,12 @@ export class HeaderComponent implements OnInit {
   @Input() title: string;
   @Input() description: string;
   @Input() backgroundImgURL: string;
+  @Input() height: string;
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log({ title: this.title, backgroundImgURL: this.backgroundImgURL })
+    console.log({ title: this.title, backgroundImgURL: this.backgroundImgURL, height: this.height })
   }
 
 }

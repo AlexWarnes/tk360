@@ -1,1 +1,42 @@
-<p>contact works!</p>
+<app-header [title]="title"
+  [description]="description"
+  [backgroundImgURL]="imgURL"
+  [height]="headerHeight"></app-header>
+<main>
+  <div class="form-wrapper">
+    <form action="#"
+      [formGroup]="ContactFG"
+      class="contact-form">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput
+          type="text"
+          formControlName="name"
+          [autocomplete]="false">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput
+          type="email"
+          formControlName="email"
+          [autocomplete]="false">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Phone Number</mat-label>
+        <input matInput
+          type="tel"
+          formControlName="phoneNumber"
+          [autocomplete]="false">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Message</mat-label>
+        <textarea matInput
+          cdkTextareaAutosize
+          #autosize="cdkTextareaAutosize"
+          cdkAutosizeMinRows="5"
+          formControlName="message"
+          cdkAutosizeMaxRows="5"></textarea>
+      </mat-form-field>
+    </form>
+  </div>
+</main>

@@ -1,0 +1,20 @@
+main {
+  min-height: 50vh;
+}
+
+.form-wrapper {
+  width: 95%;
+  max-width: 500px;
+  position: relative;
+  margin: 0 auto;
+  padding: 25px;
+  top: -30px;
+  background: #fafafa;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px 0px #00000025;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "tk360",
+      "public": "dist/tk360",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

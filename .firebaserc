@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tk360-llc": {
+      "hosting": {
+        "tk360": [
+          "tk360-llc"
+        ]
+      }
+    }
+  }
+}

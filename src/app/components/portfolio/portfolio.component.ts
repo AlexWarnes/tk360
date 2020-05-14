@@ -26,6 +26,7 @@ export class PortfolioComponent implements OnInit {
     const maxPosition = this.STATE.getMaxGalleryPosition();
     this.DIALOG.open(GalleryDialogComponent, {
       panelClass: 'gallery-dialog',
+      maxWidth: '100vw',
       autoFocus: false,
       data: {
         position: img.position,

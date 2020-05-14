@@ -1,3 +1,8 @@
 <app-header [title]="title"
   [description]="description"
   [backgroundImgURL]="imgURL"></app-header>
+<section class="gallery-container content-column">
+  <app-gallery-thumbnail (click)="handleImageClick(img)"
+    *ngFor="let img of images$ | async"
+    [imgData]="img"></app-gallery-thumbnail>
+</section>

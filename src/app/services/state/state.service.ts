@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { filter } from 'rxjs/operators';
+import { filter, map } from 'rxjs/operators';
 import { ServiceCard } from '../../models/ServiceCard.model';
+import { GalleryImage } from '../../models/GalleryImage.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -77,6 +78,35 @@ export class StateService {
   ])
   public testimonials$: Observable<any[]> = this.testimonals_.asObservable();
 
+  private galleryImages_: BehaviorSubject<GalleryImage[]> = new BehaviorSubject([
+    {
+      path: '../../assets/images/gallery/tk360_kitchen_island-01.jpeg',
+      caption: ''
+    }, {
+      path: '../../assets/images/gallery/tk360_kitchen2-01.jpeg',
+      caption: ''
+    }, {
+      path: '../../assets/images/gallery/tk360_solar-01.jpeg',
+      caption: ''
+    }, {
+      path: '../../assets/images/gallery/tk360_floors.jpg',
+      caption: ''
+    }, {
+      path: '../../assets/images/gallery/tk360_floors2.jpg',
+      caption: ''
+    }
+  ]);
+  public galleryImages$: Observable<GalleryImage[]> = this.galleryImages_.asObservable().pipe(
+    map(images => {
+      return images.map((img, i) => {
+        return {
+          ...img,
+          position: i
+        }
+      })
+    })
+  )
+
   // ========== DATA ACCESS METHODS ==========
 
   public updateDisplayType(displayType): void {
@@ -85,5 +115,17 @@ export class StateService {
 
   public toggleSidenav(status: boolean = !this.sidenavIsOpen_.value) {
     this.sidenavIsOpen_.next(status);
+  }
+
+  public selectImgByPosition$(position: number): Observable<GalleryImage> {
+    return this.galleryImages$.pipe(
+      map(images => {
+        return images[position]
+      })
+    )
+  }
+
+  public getMaxGalleryPosition(): number {
+    return this.galleryImages_.value.length - 1;
   }
 }

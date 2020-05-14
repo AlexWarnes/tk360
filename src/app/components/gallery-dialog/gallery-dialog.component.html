@@ -1,0 +1,33 @@
+<div class="gallery-container">
+  <div class="img-row">
+    <button (click)="previousImage()"
+      mat-button
+      matTooltip="Previous"
+      matTooltipPosition="right"
+      class="prev-btn">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+
+    <img [src]="(displayImage$ | async).path"
+      [alt]="(displayImage$ | async).caption"
+      class="dialog-img">
+    <button (click)="nextImage()"
+      mat-button
+      matTooltip="Next"
+      matTooltipPosition="left"
+      class="next-btn">
+      <mat-icon>keyboard_arrow_right</mat-icon>
+    </button>
+  </div>
+
+
+  <div class="dialog-footer">
+    <p class="caption">{{(displayImage$ | async).caption}}</p>
+    <button (click)="closeGallery()"
+      mat-stroked-button
+      matTooltip="Close">
+      <!-- <mat-icon>close</mat-icon> -->
+      <span>Close</span>
+    </button>
+  </div>
+</div>

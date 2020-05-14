@@ -26,6 +26,10 @@ import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
+import { GalleryThumbnailComponent } from './components/gallery-thumbnail/gallery-thumbnail.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { GalleryDialogComponent } from './components/gallery-dialog/gallery-dialog.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,9 @@ import { TestimonialComponent } from './components/testimonial/testimonial.compo
     NavMenuComponent,
     HeaderComponent,
     SocialMediaComponent,
-    TestimonialComponent
+    TestimonialComponent,
+    GalleryThumbnailComponent,
+    GalleryDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -55,8 +61,11 @@ import { TestimonialComponent } from './components/testimonial/testimonial.compo
     MatToolbarModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule,
+    MatTooltipModule
   ],
+  entryComponents: [GalleryDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

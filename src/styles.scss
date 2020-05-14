@@ -71,9 +71,9 @@ a {
 }
 
 .btn {
-  border-radius: 0 !important;
+  // border-radius: 0 !important;
   transition: all .3s ease !important;
-  box-shadow: 5px 5px 0 #333333 !important;
+  // box-shadow: 5px 5px 0 #333333 !important;
   color: #ffffff !important;
 
   &.bk-green {
@@ -86,7 +86,7 @@ a {
 
   &:hover {
     cursor: pointer !important;
-    box-shadow: -5px -5px 0 #333333 !important;
+    // box-shadow: -5px -5px 0 #333333 !important;
   }
 }
 

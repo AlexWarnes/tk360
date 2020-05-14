@@ -2,6 +2,28 @@ main {
   min-height: 50vh;
 }
 
+.contact-option-row{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+ margin: 0 0 30px 0;
+}
+.contact-option {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+  mat-icon {
+    color: #204551;
+    margin: 0 8px 0 0;
+  }
+}
+.--email-option{
+  text-decoration: none;
+}
+
+
 .form-wrapper {
   width: 95%;
   max-width: 500px;
@@ -17,4 +39,19 @@ main {
 .contact-form {
   display: flex;
   flex-direction: column;
+}
+
+.negative {
+  color: red;
+}
+
+.button-box {
+  text-align: right;
+}
+
+.submit-btn{
+  &:disabled {
+    background-color: #204551aa !important;
+    color: #ffffff !important;
+  }
 }

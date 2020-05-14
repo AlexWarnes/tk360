@@ -16,14 +16,26 @@ export class ContactComponent implements OnInit {
   ) { }
 
   ContactFG: FormGroup;
+  charactersRemaining = 500;
 
   ngOnInit(): void {
     this.ContactFG = this.FORM_BUILD.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phoneNumber: [''],
-      message: ['', [Validators.required]]
+      message: ['', [Validators.required, Validators.maxLength(500)]]
+    })
+
+    this.ContactFG.get('message').valueChanges.subscribe(message => {
+      this.charactersRemaining = 500 - message.trim().length;
     })
   }
 
+  handleContactFormSubmit() {
+    const valueToSend = {
+      ...this.ContactFG.value,
+      message: this.ContactFG.value.message.trim()
+    }
+    console.log("SUBMIT FORM:", { valueToSend })
+  }
 }

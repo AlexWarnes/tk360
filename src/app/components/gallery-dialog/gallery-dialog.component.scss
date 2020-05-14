@@ -1,0 +1,42 @@
+.gallery-container{
+  position: relative;
+}
+
+.dialog-img {
+  max-width: 100%;
+  max-height: 85vh;
+}
+
+.img-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dialog-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 0;
+}
+
+.prev-btn, .next-btn {
+  min-width: unset;
+  line-height: 0;
+  background: #ffffff;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0,0,0,.12);
+}
+
+.next-btn {
+  margin: 0 0 0 -10px;
+}
+
+.prev-btn {
+  margin: 0 -10px 0 0;
+}

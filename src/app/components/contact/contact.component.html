@@ -4,9 +4,24 @@
   [height]="headerHeight"></app-header>
 <main>
   <div class="form-wrapper">
+    <div class="contact-option-row">
+      <a class="--email-option"
+        href="mailto:deon@tk360llc.com?subject=TK360%20Contact%20Email">
+        <div class="contact-option">
+          <mat-icon>email</mat-icon>
+          <p>deon@tk360llc.com</p>
+        </div>
+      </a>
+      <div class="contact-option">
+        <mat-icon>phone</mat-icon>
+        <p>571-201-0311</p>
+      </div>
+    </div>
+    <h3 class="form-title">Contact Form</h3>
     <form action="#"
       [formGroup]="ContactFG"
-      class="contact-form">
+      class="contact-form"
+      (ngSubmit)="handleContactFormSubmit()">
       <mat-form-field>
         <mat-label>Name</mat-label>
         <input matInput
@@ -34,9 +49,19 @@
           cdkTextareaAutosize
           #autosize="cdkTextareaAutosize"
           cdkAutosizeMinRows="5"
-          formControlName="message"
-          cdkAutosizeMaxRows="5"></textarea>
+          formControlName="message"></textarea>
+        <mat-hint [ngClass]="{
+          negative: charactersRemaining < 0
+        }">{{charactersRemaining}} characters remaining</mat-hint>
       </mat-form-field>
+      <div class="button-box">
+        <button mat-raised-button
+          role="submit"
+          class="submit-btn btn bk-green"
+          [disabled]="ContactFG.invalid">
+          Send
+        </button>
+      </div>
     </form>
   </div>
 </main>
